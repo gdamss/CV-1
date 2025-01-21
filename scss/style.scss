@@ -9,7 +9,8 @@
   grid:
     "picture header" auto
     "aside main" 1fr
-    /350px auto;
+    "footer footer" auto
+    / 350px auto;
 }
 
 header {
@@ -74,73 +75,71 @@ aside {
         background: var(--light);
       }
       .bar-skill-dot {
-        position: absolute ;
+        position: absolute;
         height: 10px;
         width: 10px;
         background: var(--dark);
-        left: calc(80% - 5px) ;
+        left: calc(80% - 5px);
         top: -2.5px;
         transform: rotate(45deg);
       }
     }
-    .stars-container{
+    .stars-container {
       display: flex;
       margin: 2rem 0 3rem 0;
       color: var(--hint);
-      i{
+      i {
         font-size: 2rem;
         margin: 0 1rem;
       }
     }
-    .social-container{
+    .social-container {
       display: flex;
       justify-content: start;
       align-items: center;
       margin: 2rem 0;
-      i{
+      i {
         font-size: 2rem;
         flex: 0 0 50px;
         margin-right: 1rem;
       }
-      p{
+      p {
         flex: auto;
         margin: 0;
       }
     }
-
   }
 }
 
 main {
   grid-area: main;
   padding: 5rem;
-  h2{
+  h2 {
     margin-bottom: 4rem;
   }
-  p{
+  p {
     letter-spacing: 0.1rem;
     line-height: 3rem;
-   
   }
-  .experience{
+  .experience {
     display: flex;
     margin: 6rem 0;
-    .timeline{
+    .timeline {
       text-align: center;
       color: var(--hint);
       padding-right: 2rem;
       border-right: 1px solid var(--border);
       padding-top: 0;
     }
-    .content{
+    .content {
       padding: 0 1rem;
-      h2{
+      h2 {
         margin: 0;
       }
-      p{
+      p {
         margin: 0;
       }
-      ul{
+      ul {
         margin: 2rem 0;
         list-style: circle;
         padding-left: 4rem;
@@ -149,3 +148,57 @@ main {
   }
 }
 
+footer {
+  grid-area: footer;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  padding: 5rem;
+  background: var(--text);
+  h2 {
+    margin-bottom: 3rem;
+  }
+  form {
+    display: flex;
+    align-items: center;
+
+    .prefix {
+      background: linear-gradient(to right, var(--dark), var(--light));
+      padding: 1rem 2rem;
+      color: white;
+      font-size: 2rem;
+      border-top-left-radius: 0.5rem;
+      border-bottom-left-radius: 0.5rem;
+    }
+    button {
+      background: var(--text);
+      border: 0;
+      cursor: pointer;
+      transition: all 0.2s;
+      &:hover {
+        opacity: 0.8;
+      }
+      .postfix {
+        background: linear-gradient(to right, var(--dark), var(--light));
+        padding: 1rem 2rem;
+        color: white;
+        font-size: 2rem;
+        border-top-right-radius: 0.5rem;
+        border-bottom-right-radius: 0.5rem;
+      }
+    }
+    input {
+      outline: 0;
+      border: 0;
+      min-width: 400px;
+      padding: 1rem 2rem;
+      line-height: 2rem;
+      &::placeholder {
+        color: var(--text);
+      }
+    }
+  }
+}
